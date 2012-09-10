@@ -1,0 +1,75 @@
+########################################################################## 
+
+							YUVconverter
+		  			        Version: 1.0
+						  Author: Anil M S	
+
+########################################################################## 
+
+___________
+DESCRIPTION
+~~~~~~~~~~~
+	A set of functions that can convert between different
+	Raw Video formats (YUV/RGB). YUVconverter can convert
+	from yuv420 Progressive Planar format to any other
+    Raw Video Format. Also it can convert back from any
+	Raw Video Format to YUV420 Progressive Planar format.
+
+
+
+The different Raw Video Formats supported are:
+
+	+-------------------------------------------+
+	|					|						|
+	|	yuv420			|		yuv444 Planar	|
+	|	yvu420			|		yvu444 Planar	|
+	|					|		uyv444 Planar	|
+	|	yuv422			|		             	|
+	|	yvu422			|		yuv444 Packed	|
+	|	      			|		yvu444 Packed	|
+	|	uyvy  			|		uyv444 Packed	|
+	|	yuyv			|		             	|
+	|	yvyu  			|		             	|
+	|	          		|		             	|
+	+-------------------------------------------+
+
+	For all formats both Progressive and Interlaced 
+	formats are supported.
+
+
+___________
+COMPILATION
+~~~~~~~~~~~
+
+Unix Like Systems:
+
+	Type make
+	This will create the executable.
+
+Windows:
+	
+	VC++ 6.0 Project is included in the package.
+	Open the Project and compile to get the executable.
+	
+So far I have tested only on cygwin and VC++. But this
+should work on all systems.
+
+
+_____
+USAGE
+~~~~~
+	./yuvconverter.exe <infile> <outfile> <width> <height> <conv_code>
+	Type ./yuvconverter.exe for more details
+
+
+_______
+COPYING
+~~~~~~~
+Please see COPYING file for License issues.
+
+
+___________
+BUG REPORTS
+~~~~~~~~~~~
+Please Report all bugs to dxxx.sourceforge@gmail.com	
+
