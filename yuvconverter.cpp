@@ -47,6 +47,7 @@ int main(int argc, char **argv)
 		printf("\n  |   YUV420 Prog Planar   |   YUV420 Int Planar    |  110111  |");
 		printf("\n  |   YUV420 Prog Planar   |   YVU420 Prog Planar   |  110120  |");
 		printf("\n  |   YUV420 Prog Planar   |   YVU420 Int Planar    |  110121  |");
+		printf("\n  |   YUV420 Prog Planar   |   YCbCr Prog Planar    |  110130  |");
 		printf("\n  +------------------------------------------------------------+");
 		printf("\n  |   YUV420 Prog Planar   |   YUV422 Prog Planar   |  110210  |");
 		printf("\n  |   YUV420 Prog Planar   |   YUV422 Int Planar    |  110211  |");
@@ -84,6 +85,7 @@ int main(int argc, char **argv)
 		printf("\n  |   YUV420 Int Planar    |   YUV420 Prog Planar   |  111110  |");
 		printf("\n  |   YVU420 Prog Planar   |   YUV420 Prog Planar   |  120110  |");
 		printf("\n  |   YVU420 Int Planar    |   YUV420 Prog Planar   |  121110  |");
+		printf("\n  |   YCbCr Prog Planar    |   YUV420 Prog Planar   |  130110  |");
 		printf("\n  +------------------------------------------------------------+");
 		printf("\n  |   YUV422 Prog Planar   |   YUV420 Prog Planar   |  210110  |");
 		printf("\n  |   YUV422 Int Planar    |   YUV420 Prog Planar   |  211110  |");
@@ -173,6 +175,12 @@ int main(int argc, char **argv)
 					outframesize = (width * height * 3)>>1;
 					break;
 
+			case 110130:
+					yuvconvert = yuv420_prog_planar_to_ycbcr_planar;
+					inframesize = (width * height * 3)>>1;
+					outframesize = (width * height * 3)>>1;
+					break;
+
 			/* 420 rev */		
 			case 111110:
 					yuvconvert = yuv420_int_planar_to_yuv420_prog_planar;
@@ -190,6 +198,13 @@ int main(int argc, char **argv)
 
 			case 121110:
 					yuvconvert = yvu420_int_planar_to_yuv420_prog_planar;
+					inframesize = (width * height * 3)>>1;
+					outframesize = (width * height * 3)>>1;
+					break;
+
+
+			case 130110:
+					yuvconvert = ycbcr_planar_to_yuv420_prog_planar;
 					inframesize = (width * height * 3)>>1;
 					outframesize = (width * height * 3)>>1;
 					break;

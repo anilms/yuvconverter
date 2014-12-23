@@ -53,6 +53,7 @@ void InitConvt(int width, int height);
 void  yuv420_prog_planar_to_yuv420_int_planar(unsigned char *,unsigned char *, int , int );			//110111
 void  yuv420_prog_planar_to_yvu420_prog_planar(unsigned char *,unsigned char *, int , int );		//110120
 void  yuv420_prog_planar_to_yvu420_int_planar(unsigned char *,unsigned char *, int , int );			//110121
+void  yuv420_prog_planar_to_ycbcr_planar(unsigned char *,unsigned char *, int , int );				//110130
 
 void  yuv420_prog_planar_to_yuv422_prog_planar(unsigned char *,unsigned char *, int , int );		//110210
 void  yuv420_prog_planar_to_yuv422_int_planar(unsigned char *,unsigned char *, int , int );			//110211
@@ -93,6 +94,7 @@ void  yuv420_prog_planar_to_bgr_packed(unsigned char *,unsigned char *, int , in
 void  yuv420_int_planar_to_yuv420_prog_planar(unsigned char *,unsigned char *, int , int );			//111110
 void  yvu420_prog_planar_to_yuv420_prog_planar(unsigned char *,unsigned char *, int , int );		//120110
 void  yvu420_int_planar_to_yuv420_prog_planar(unsigned char *,unsigned char *, int , int );			//121110
+void  ycbcr_planar_to_yuv420_prog_planar(unsigned char *,unsigned char *, int , int );				//130110
 
 void  yuv422_prog_planar_to_yuv420_prog_planar(unsigned char *,unsigned char *, int , int );		//210110
 void  yuv422_int_planar_to_yuv420_prog_planar(unsigned char *,unsigned char *, int , int );			//211110
