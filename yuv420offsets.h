@@ -198,3 +198,52 @@ Module Description:
 #endif
 
 
+
+
+#ifdef YUV_420_PLANAR_YCBCR
+#ifdef SRC
+	unsigned char *ptrsrcy1, *ptrsrcy2;
+	unsigned char *ptrsrcy3, *ptrsrcy4;
+   	unsigned char *ptrsrccb1, *ptrsrccb2;
+   	unsigned char *ptrsrccr1, *ptrsrccr2;
+	int srcystride, srcccstride;
+
+	ptrsrcy1 = bufsrc;
+	ptrsrcy2 = bufsrc + width;
+	ptrsrcy3 = bufsrc + width*2;
+	ptrsrcy4 = bufsrc + width*3;
+	
+	ptrsrccb1 = bufsrc + width*height;	
+	ptrsrccb2 = bufsrc + width*height + width;	
+	
+	ptrsrccr1 = bufsrc + width*height + 1;	
+	ptrsrccr2 = bufsrc + width*height + 1 + width;	
+
+	srcystride  = (width)*3;
+	srcccstride = (width);
+#endif
+
+#ifdef DEST
+	unsigned char *ptrdesty1, *ptrdesty2;
+	unsigned char *ptrdesty3, *ptrdesty4;
+   	unsigned char *ptrdestcb1, *ptrdestcb2;
+   	unsigned char *ptrdestcr1, *ptrdestcr2;
+	int destystride, destccstride;
+
+	ptrdesty1 = bufdest;
+	ptrdesty2 = bufdest + width;
+	ptrdesty3 = bufdest + width*2;
+	ptrdesty4 = bufdest + width*3;
+	
+	ptrdestcb1 = bufdest + width*height;	
+	ptrdestcb2 = bufdest + width*height + width;	
+	
+	ptrdestcr1 = bufdest + width*height + 1;	
+	ptrdestcr2 = bufdest + width*height + width + 1;	
+
+	destystride  = (width)*3;
+	destccstride = (width);
+#endif
+#endif
+
+
