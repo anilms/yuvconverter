@@ -7,9 +7,6 @@ Header File for yuvconverter.cpp
 
 *****************************************************************************/
 #define NUMARGS 	(5+1)			//actual no. of ARGs+1
-#define MAXWIDTH	720	
-#define MAXHEIGHT	576	
-
 
 /*****************************************************************************
 
