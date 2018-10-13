@@ -47,6 +47,8 @@ void InitConvt(int width, int height);
 /* Functions to convert from YUV420 */
 
 /* yuv420 converters */ 
+void  yuv420_prog_planar_to_yuv400_prog_planar(unsigned char *,unsigned char *, int , int );		//110100
+
 void  yuv420_prog_planar_to_yuv420_int_planar(unsigned char *,unsigned char *, int , int );			//110111
 void  yuv420_prog_planar_to_yvu420_prog_planar(unsigned char *,unsigned char *, int , int );		//110120
 void  yuv420_prog_planar_to_yvu420_int_planar(unsigned char *,unsigned char *, int , int );			//110121
@@ -88,6 +90,8 @@ void  yuv420_prog_planar_to_bgr_packed(unsigned char *,unsigned char *, int , in
 /* Functions to convert to YUV420 */
 
 /* yuv420 converters */ 
+void  yuv400_prog_planar_to_yuv420_prog_planar(unsigned char *,unsigned char *, int , int );		//100110
+
 void  yuv420_int_planar_to_yuv420_prog_planar(unsigned char *,unsigned char *, int , int );			//111110
 void  yvu420_prog_planar_to_yuv420_prog_planar(unsigned char *,unsigned char *, int , int );		//120110
 void  yvu420_int_planar_to_yuv420_prog_planar(unsigned char *,unsigned char *, int , int );			//121110

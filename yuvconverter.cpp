@@ -41,6 +41,7 @@ int main(int argc, char **argv)
         printf("\n  +------------------------------------------------------------+");
         printf("\n  |      Input Format      |    Output Format       | ConvCode |");
         printf("\n  +------------------------------------------------------------+");
+        printf("\n  |   YUV420 Prog Planar   |   YUV400 Prog Planar   |  110100  |");
         printf("\n  |   YUV420 Prog Planar   |   YUV420 Int Planar    |  110111  |");
         printf("\n  |   YUV420 Prog Planar   |   YVU420 Prog Planar   |  110120  |");
         printf("\n  |   YUV420 Prog Planar   |   YVU420 Int Planar    |  110121  |");
@@ -79,6 +80,7 @@ int main(int argc, char **argv)
         printf("\n  +------------------------------------------------------------+");
         printf("\n  |                                                            |");
         printf("\n  +------------------------------------------------------------+");
+        printf("\n  |   YUV400 Prog Planar   |   YUV420 Prog Planar   |  100110  |");
         printf("\n  |   YUV420 Int Planar    |   YUV420 Prog Planar   |  111110  |");
         printf("\n  |   YVU420 Prog Planar   |   YUV420 Prog Planar   |  120110  |");
         printf("\n  |   YVU420 Int Planar    |   YUV420 Prog Planar   |  121110  |");
@@ -152,6 +154,13 @@ int main(int argc, char **argv)
     {
 
             /* YUV420 Output */
+            case 110100:
+                    yuvconvert = yuv420_prog_planar_to_yuv400_prog_planar;
+                    inframesize = (width * height * 3)>>1;
+                    outframesize = (width * height);
+                    break;
+
+
             case 110111:
                     yuvconvert = yuv420_prog_planar_to_yuv420_int_planar;
                     inframesize = (width * height * 3)>>1;
@@ -179,6 +188,13 @@ int main(int argc, char **argv)
                     break;
 
             /* 420 rev */        
+            case 100110:
+                    yuvconvert = yuv400_prog_planar_to_yuv420_prog_planar;
+                    inframesize = (width * height);
+                    outframesize = (width * height * 3)>>1;
+                    break;
+
+
             case 111110:
                     yuvconvert = yuv420_int_planar_to_yuv420_prog_planar;
                     inframesize = (width * height * 3)>>1;

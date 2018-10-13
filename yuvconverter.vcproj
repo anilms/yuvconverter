@@ -241,6 +241,10 @@
 				</FileConfiguration>
 			</File>
 			<File
+				RelativePath=".\yuv420planarto400planar.cpp"
+				>
+			</File>
+			<File
 				RelativePath="yuv420planarto420planar.cpp"
 				>
 				<FileConfiguration
@@ -471,6 +475,10 @@
 			</File>
 			<File
 				RelativePath="rgboffsets.h"
+				>
+			</File>
+			<File
+				RelativePath=".\yuv400offsets.h"
 				>
 			</File>
 			<File
